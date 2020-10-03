@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>FRAM System</title>
+    <style type="text/css">
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        .left {
+          left: 0;
+          background-color: lightblue;
+        }
+        .right {
+          right: 0;
+          background-color: lightblue;
+        }
+
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+        img {
+          width: 820px;
+        }
+    </style>
+  </head>
+  <body>
+
+      <div class="split left">
+          <div class="centered">
+              <img id="bg" src="{{ url_for('video_feed') }}">
+          </div>
+      </div>
+
+      <div class="split right">
+          <div class="centered">
+              <form action="" method="post">
+                  <label for="uid">UID:</label>
+                  <input type="text" id="uid" name="uid"><br><br>
+                  <input type="submit" value="Submit">
+              </form>
+              {% if message %}
+                   <p>{{ message }}</p>
+              {% endif %}
+          </div>
+      </div>
+  </body>
+</html>
