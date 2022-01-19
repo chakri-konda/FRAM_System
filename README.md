@@ -10,7 +10,8 @@ templates folder consists of the main html template for our flask Application.
 
 
 ### Before Running,
-make sure you have the dlib library downloaded, up and running.
-TO RUN,
-$ pip install -r requirements.txt
-$ python3 main.py
+make sure you have the dlib library downloaded, up and running, python3 preferred.
+
+TO RUN,<br>
+$ pip install -r requirements.txt <br>
+$ python main.py
